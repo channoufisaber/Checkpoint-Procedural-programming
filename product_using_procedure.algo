@@ -1,0 +1,42 @@
+PROCEDURE dot_product(v1,v2)
+VAR
+    var ps:INTEGER
+        i:INTEGER;
+BEGIN
+    ps:=0;
+    FOR i FROM 0 TO v1.length-1  DO
+        ps:=ps+(v1[i]*v2[i])
+    END_FOR
+END
+
+ALGORITHM product_using_procedure
+VAR
+  v1 : ARRAY_OF INTEGER [10];
+  v2 : ARRAY_OF INTEGER [10];
+ 
+BEGIN
+    write("give the numbers of pairs couples")
+    read(n)
+
+FOR k FROM 0 TO n-1    DO
+
+    FOR i FROM 0 TO 11    DO
+        read(v1[i])
+	i =i+1;
+    END_FOR
+    FOR j FROM 1 TO 11    DO
+        read(v2[j])
+	j =j+1;
+    END_FOR
+	k =k+1;
+    dot_product(v1,v2)
+    
+    IF (ps==0) THEN
+        write("the vectors are orthogonal")
+    ELSE
+       write("the vectors are not orthogonal")
+    END_IF
+
+END_FOR
+
+END
